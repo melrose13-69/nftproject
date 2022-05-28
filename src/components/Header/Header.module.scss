@@ -1,0 +1,101 @@
+@import "../../assets/scss/vars";
+
+// header ---------------------------------------------------
+.header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, .5);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  height: 100%;
+}
+// navigation ---------------------------------------------------
+.nav {
+  &-wrapper {
+    color: $green;
+    user-select: none;
+  }
+}
+
+//logo ---------------------------------------------------
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  font-size: 35px;
+  background: linear-gradient(to right, $green, $green 47%, $primaryText 47%, $primaryText 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// community ---------------------------------------------------
+.community {
+  font-size: 24px;
+  display: flex;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+
+  &-icon {
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+// media ---------------------------------------------------
+@media screen and (max-width: 767.99px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .wrapper {
+    gap: 18px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .header {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .wrapper {
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 575.99px) {
+  .wrapper {
+    grid-template-columns: 1fr auto;
+  }
+  .logoWrapper {
+    justify-content: flex-start;
+  }
+  .nav {
+    display: none;
+  }
+
+  .community {
+    gap: 20px;
+  }
+}

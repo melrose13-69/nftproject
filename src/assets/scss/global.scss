@@ -1,0 +1,71 @@
+@import "fonts";
+@import "vars";
+@import "normalize";
+
+html {
+  font-family: 'Chakra Petch', sans-serif;
+  color: $primaryText;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.container {
+  max-width: $container1400;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 $container1400Padding;
+}
+
+
+main {
+  height: 100%;
+  section {
+    position: relative;
+    height: 100vh;
+  }
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: text-shadow .3s;
+
+  &:hover {
+    text-shadow: 2px 2px black;
+  }
+}
+
+@media screen and (max-width: 1499.99px) {
+  .container {
+    max-width: $container1140;
+  }
+}
+
+@media screen and (max-width: 1199.99px) {
+  .container {
+    max-width: $container940;
+  }
+}
+
+@media screen and (max-width: 991.99px) {
+  .container {
+    max-width: $container748;
+    padding: 0 $container748Padding;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .container {
+    max-width: calc(100% - 30px);
+  }
+}

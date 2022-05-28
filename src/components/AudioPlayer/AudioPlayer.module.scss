@@ -1,0 +1,123 @@
+@import "../../assets/scss/vars";
+
+$column: 25px;
+$gapColumns: 20px;
+
+
+// player wrapper
+.player {
+  position: fixed;
+  z-index: 999999;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+}
+
+// -----------------------------------
+
+.info {
+  display: flex;
+  padding: 0 $column + $gapColumns;
+}
+// name of sound
+.name {
+  max-width: 350px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// time
+.time {
+  margin-left: auto;
+}
+// -----------------------------------
+
+// -----------------------------------
+// controls
+.button {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+// sound refs
+.sound {
+  display: grid;
+  grid-template-columns: $column 1fr $column;
+  align-items: center;
+  grid-gap: $gapColumns;
+}
+
+// progress bar
+.timeline {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.progress {
+  background: $green;
+  height: 100%;
+  width: 100%;
+}
+// -----------------------------------
+
+@media screen and (max-width: 991.99px) {
+  .player {
+    max-width: 400px;
+  }
+
+  .sound {
+    grid-gap: 10px;
+  }
+
+  .name {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .player {
+    font-size: 8px;
+    bottom: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .player {
+    font-size: 8px;
+    max-width: calc(100% - 30px);
+    bottom: 20px;
+  }
+  .info {
+    padding: 0 35px;
+  }
+
+  .sound {
+    grid-template-columns: 20px 1fr 20px;
+    grid-gap: 15px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+
+  .name {
+    max-width: 40vw;
+  }
+}
