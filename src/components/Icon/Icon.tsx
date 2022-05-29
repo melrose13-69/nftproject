@@ -7,7 +7,9 @@ const Icon: FC<IconState> = ({ className, icon, link }) => {
   return (
     <>
       { link
-        ? <a href={link.to} target={link.target || '_blank'}><FontAwesomeIcon className={className} icon={icon}/></a>
+        ? <a className={className} href={link.to} target={link.target || '_blank'}>
+          <FontAwesomeIcon icon={icon}/>
+        </a>
         : <FontAwesomeIcon className={className} icon={icon}/>
       }
     </>

@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import s from './Header.module.scss'
-import HeaderCommunity from './HeaderCommunity/HeaderCommunity'
 import HeaderLogo from './HeaderLogo/HeaderLogo'
-import HeaderNavigation from './HeaderNavigation/HeaderNavigation'
+import Navigation from '../Navigation/Navigation'
+import Community from '../Community/Community'
+import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Header: FC= () => {
 
@@ -10,9 +11,12 @@ const Header: FC= () => {
     <header className={s.header}>
       <div className="container">
         <div className={s.wrapper}>
-          <HeaderNavigation />
+          <Navigation className={s.nav} navigation={[]}/>
           <HeaderLogo />
-          <HeaderCommunity />
+          <Community
+            className={s.community}
+            community={[{ icon: faDiscord, link: { to: '/' } }, { icon: faTwitter, link: { to: '/' } }]}
+          />
         </div>
       </div>
     </header>

@@ -1,84 +1,11 @@
-.teamGroup {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100vh;
-  padding: 20px 0;
-}
-
-.teamLine {
-  display: flex;
-  justify-content: space-between;
-  left: 0;
-  top: 0;
+.container {
+  max-width: 80%;
   width: 100%;
-
-  &.center {
-    position: absolute;
-    justify-content: center;
-    top: 285px;
-    width: max-content;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+  margin: 0 auto;
 }
 
-.group {
-  display: grid;
-  grid-template-areas: "left right" "bot bot";
-  justify-content: center;
-  grid-column-gap: 80px;
-}
-
-.member {
-  display: grid;
-  justify-content: center;
-
-  &:nth-child(1) {
-    grid-area: left;
-  }
-
-  &:nth-child(2) {
-    grid-area: right;
-  }
-
-  &:nth-child(3) {
-    grid-area: bot;
-  }
-}
-
-.content {
+.team {
   display: flex;
   flex-direction: column;
-  height: max-content;
-  background-image: url("../../assets/images/memberBackground.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  img {
-    width: 100%;
-  }
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  padding: 8px 0;
-  cursor: default;
-
-  a {
-    margin-right: 5px;
-
-    &:last-child {
-      margin-right: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 1499.99px) {
-  .content {
-    max-width: 180px;
-  }
+  justify-content: flex-end;
 }

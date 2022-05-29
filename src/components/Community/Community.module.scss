@@ -1,0 +1,16 @@
+@import "../../assets/scss/vars";
+
+.community {
+  font-size: 24px;
+  display: flex;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.communityIcon {
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: $green;
+  }
+}

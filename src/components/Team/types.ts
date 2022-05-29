@@ -8,5 +8,6 @@ interface Social extends Link {
 export interface MemberProps {
     src: string
     socials: Social[]
-    nickname: string
+    name: string
+    post: string
 }

@@ -7,14 +7,14 @@
   width: 100%;
   top: 0;
   padding: 20px 0;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(13, 21, 26, .25);
   font-size: 14px;
   text-transform: uppercase;
 }
 .wrapper {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 90px 1fr 90px;
   height: 100%;
 }
 // navigation ---------------------------------------------------
@@ -35,26 +35,10 @@
   position: relative;
   z-index: 1;
   font-size: 35px;
-  background: linear-gradient(to right, $green, $green 47%, $primaryText 47%, $primaryText 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
 }
 
-// community ---------------------------------------------------
-.community {
-  font-size: 24px;
-  display: flex;
-  gap: 32px;
-  grid-template-columns: repeat(3, 1fr);
 
-  &-icon {
-    transition: color .3s ease-in-out;
-
-    &:hover {
-      color: $green;
-    }
-  }
-}
 
 // media ---------------------------------------------------
 @media screen and (max-width: 767.99px) {
