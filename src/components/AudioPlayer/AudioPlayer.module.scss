@@ -9,7 +9,7 @@ $gapColumns: 20px;
   position: fixed;
   z-index: 999999;
   left: 50%;
-  bottom: 40px;
+  bottom: 50px;
   transform: translate(-50%, 0);
   max-width: 600px;
   width: 100%;
@@ -95,14 +95,14 @@ $gapColumns: 20px;
 @media screen and (max-height: 450px) {
   .player {
     font-size: 8px;
-    bottom: 20px;
+    bottom: 30px;
   }
 }
 @media screen and (max-width: 450px) {
   .player {
     font-size: 8px;
     max-width: calc(100% - 30px);
-    bottom: 20px;
+    bottom: 30px;
   }
   .info {
     padding: 0 35px;

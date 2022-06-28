@@ -18,7 +18,6 @@ const Team: FC = () => {
         urlWebm={finalVideoWebm}
         className='final'
       />
-      <Footer />
     </section>
   )
 }

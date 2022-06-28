@@ -1,6 +1,6 @@
 import './App.scss'
 import 'swiper/css'
-import React, { FC, useEffect } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import MainContent from '../Main/MainContent'
 import AudioPlayer from '../AudioPlayer/AudioPlayer'
 import Roadmap from '../Roadmap/Roadmap'
@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCreative, Mousewheel } from 'swiper'
 import { CreativeEffectOptions } from 'swiper/types'
 import Team from '../Team/Team'
+import Footer from '../Footer/Footer'
 
 const creativeEffectOptions: CreativeEffectOptions = {
   prev: {
@@ -20,8 +21,7 @@ const creativeEffectOptions: CreativeEffectOptions = {
 }
 
 const App: FC = () => {
-
-  alert(`${window.innerWidth}x${window.innerHeight}`)
+  const [slideIndex, setSlideIndex] = useState(0)
 
   return (
     <div className="App">
@@ -32,6 +32,7 @@ const App: FC = () => {
           slidesPerView={1}
           mousewheel={true}
           modules={[Mousewheel]}
+          onSlideChange={(e): void => setSlideIndex(e.activeIndex)}
         >
           <SwiperSlide>
             <MainContent/>
@@ -45,6 +46,7 @@ const App: FC = () => {
         </Swiper>
       </main>
       <AudioPlayer />
+      {slideIndex === 2 ? <Footer/> : <></> }
     </div>
   )
 }
